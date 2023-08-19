@@ -1,20 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        * {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+
 </head>
+
 <body>
     <header>
-
+     <section class="mx-auto justify-center flex flex-col lg:flex-row items-center gap-10 bg-[#F9F6E2]">
+        <div class="text-center space-y-10 mb-8 ">
+            <h4 class="text-2xl text-[#111] uppercase font-medium">---Sale Fever---</h4>
+            <h1 class="text-5xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
+            <p class="text-xl font-medium">Use Promo Code <button class="bg-[#E527B2] h-10 rounded-lg w-32 text-white">SELL200</button></p>
+        </div>
+        <div class=" mb-8">
+            <img class="h-[500px] w-[500px]" src="images/Summer 1.png" alt="">
+        </div>
+     </section>
     </header>
-    <main>
 
+    <main>
+        <section class="mx-auto bg-[#F8F8F8] ">
+            <div class="flex lg:flex-col-4 gap-10 mx-auto justify-center ">
+                <div class="mt-24">
+                    <div class="card  bg-base-100 ">
+                        <figure class=" p-3 w-56 ">
+                          <img class="bg-[#1111110D] p-14 rounded-md h-48 w-56 " src="/images/prod1.png" alt="prod1"/>
+                        </figure>
+                        <div class="card-body items-center text-center -mt-6">
+                            <div class="rating rating-md">
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                              </div>
+                          <p class="font-semibold">K. Accessories</p>
+                          <p class="text-[#11111180]">39.00 TK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24">
+                    <div class="card  bg-base-100 ">
+                        <figure class=" p-3 w-56 ">
+                          <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod2.png" alt="prod2"/>
+                        </figure>
+                        <div class="card-body items-center text-center -mt-6">
+                            <div class="rating rating-md">
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                              </div>
+                          <p class="font-semibold">K. Accessories</p>
+                          <p class="text-[#11111180]">25.00 TK</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="mt-24">
+                    <div class="card  bg-base-100 ">
+                        <figure class=" p-3 w-56 ">
+                          <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod3.png" alt="prod3"/>
+                        </figure>
+                        <div class="card-body items-center text-center -mt-6">
+                            <div class="rating rating-md">
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-200" />
+                              </div>
+                          <p class="font-semibold">Home Cooker</p>
+                          <p class="text-[#11111180]">49.00 TK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24">
+                    <div class="card w-56 bg-base-100 ">
+                        <figure class="px-10 pt-10">
+                          <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 class="card-title">Shoes!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>
