@@ -47,7 +47,8 @@ function firstValue(){
     const textName = getInnerTextValue('first-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText =  textName;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p);
 
     const innerPriceValue = getInnerPriceValue('first-price');
@@ -61,7 +62,8 @@ function secondValue(){
     const textName = getInnerTextValue('second-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText = textName ;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p);
 
     const innerPriceValue = getInnerPriceValue('second-price');
@@ -75,7 +77,8 @@ function thirdValue(){
     const textName = getInnerTextValue('third-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText = textName ;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p)
 
     const innerPriceValue = getInnerPriceValue('third-price');
@@ -89,7 +92,8 @@ function fourthValue(){
     const textName = getInnerTextValue('fourth-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText = textName ;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p)
 
     const innerPriceValue = getInnerPriceValue('fourth-price');
@@ -103,7 +107,8 @@ function fifthValue(){
     const textName = getInnerTextValue('fifth-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText = textName ;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p)
 
     const innerPriceValue = getInnerPriceValue('fifth-price');
@@ -117,7 +122,8 @@ function sixthValue(){
     const textName = getInnerTextValue('sixth-name');
     const productNameList = document.getElementById('product-name-list');
     const p = document.createElement('p');
-    p.innerText = textName ;
+    const number = productNameList.childElementCount;
+    p.innerText = number+1 +'.'+' '+ textName;
     productNameList.appendChild(p)
 
     const innerPriceValue = getInnerPriceValue('sixth-price');
@@ -127,11 +133,12 @@ function sixthValue(){
     setInnerText('total-price', sum);
 
 }
-function discountPrice (){
-const discountPriceValue = getInnerPriceValue('discount-price')
-const discountPrice = sum *(20/100);
-const discount = sum - 200;
-setInnerText('discount-price', sum);
+function applyDiscount(){
+    const totalSum = getInnerPriceValue('total-price');
+    const discountPrice = totalSum * (20/100);
+    const discount = totalSum - discountPrice;
+    setInnerText('discount-price', discountPrice.toFixed(2));
+    setInnerText('total-discount-price', discount);
 }
 
 
