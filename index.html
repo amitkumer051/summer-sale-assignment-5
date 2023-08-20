@@ -44,7 +44,7 @@
                     <div class="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                         <!-- <div class="flex flex-col-1 md:flex-col-2 lg:flex-col-3 gap-6 "> -->
                         <div>
-                            <div class="card bg-base-100 ">
+                            <div onclick="firstValue()" class="card bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-14 rounded-md h-48 w-56 " src="/images/prod1.png"
                                         alt="prod1" />
@@ -58,13 +58,13 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">K. Accessories</p>
-                                    <p class="text-[#11111180]">39.00 TK</p>
+                                    <p id="first-name" class="font-semibold">K. Accessories</p>
+                                    <p id="first-price"  class="text-[#11111180]">39.00 TK</p>
                                 </div>
                             </div>
                         </div>
                         <div class="">
-                            <div class="card  bg-base-100 ">
+                            <div onclick="secondValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod2.png" alt="prod2" />
                                 </figure>
@@ -77,14 +77,14 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">K. Accessories</p>
-                                    <p class="text-[#11111180]">25.00 TK</p>
+                                    <p id="second-name" class="font-semibold">A. Accessories</p>
+                                    <p id="second-price" class="text-[#11111180]">25.00 TK</p>
                                 </div>
                             </div>
 
                         </div>
                         <div class="">
-                            <div class="card  bg-base-100 ">
+                            <div onclick="thirdValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod3.png" alt="prod3" />
                                 </figure>
@@ -97,8 +97,8 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">Home Cooker</p>
-                                    <p class="text-[#11111180]">49.00 TK</p>
+                                    <p id="third-name" class="font-semibold">Home Cooker</p>
+                                    <p id="third-price" class="text-[#11111180]">49.00 TK</p>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                     </h1>
                     <div class="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto mb-14 ">
                         <div class="">
-                            <div class="card  bg-base-100 ">
+                            <div onclick="fourthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-56  " src="/images/prod4.png"
                                         alt="prod4" />
@@ -123,13 +123,13 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">Sports Back Cap</p>
-                                    <p class="text-[#11111180]">49.00 TK</p>
+                                    <p id="fourth-name" class="font-semibold">Sports Back Cap</p>
+                                    <p id="fourth-price" class="text-[#11111180]">49.00 TK</p>
                                 </div>
                             </div>
                         </div>
                         <div class="">
-                            <div class="card  bg-base-100 ">
+                            <div onclick="fifthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-48 " src="/images/prod5.png"
                                         alt="prod5" />
@@ -143,14 +143,14 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">Full Jersey Set</p>
-                                    <p class="text-[#11111180]">69.00 TK</p>
+                                    <p id="fifth-name" class="font-semibold">Full Jersey Set</p>
+                                    <p id="fifth-price" class="text-[#11111180]">69.00 TK</p>
                                 </div>
                             </div>
 
                         </div>
                         <div class="">
-                            <div class="card  bg-base-100 ">
+                            <div onclick="sixthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-46" src="/images/prod6.png"
                                         alt="prod6" />
@@ -164,8 +164,8 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="font-semibold">Sports cates</p>
-                                    <p class="text-[#11111180]">159.00 TK</p>
+                                    <p id="sixth-name" class="font-semibold">Sports cates</p>
+                                    <p id="sixth-price" class="text-[#11111180]">159.00 TK</p>
                                 </div>
                             </div>
                         </div>
@@ -182,14 +182,14 @@
                         </span>
                     </div>
                     <div class="bg-white w-56 h-auto p-4 lg:mt-14 rounded-md mb-20">
-                        <div class="mb-2">
-                            <h1></h1>
+                        <div id="product-name-list" class="mb-2">
+                            
                         </div>
                         <hr>
                         <div class="mt-2 mb-2 font-medium">
-                            <p>Total Price:</p>
-                            <p>Discount:</p>
-                            <p>Total:</p>
+                            <p>Total Price: <span id="total-price">00</span> TK</p>
+                            <p>Discount: <span id="discount-price">00</span> TK</p>
+                            <p>Total: <span>00</span> TK</p>
                         </div>
                         <hr>
                         <div class="mt-4 -mb-8">
@@ -213,6 +213,8 @@
                 </div>
             </div>
         </section>
+
+        <script src="js/index.js"></script>
     </main>
     <footer>
     </footer>
