@@ -1,26 +1,3 @@
-// function clickHandel(){
-//     const productName = document.getElementById('product-name');
-//     const innerProduct = productName.innerText;
-    
-//     const productNameList = document.getElementById('product-name-list');
-//     const h1 = document.createElement('h1');
-//     h1.innerText = innerProduct ;
-//     productNameList.appendChild(h1);
-
-//     const productPrice = document.getElementById('product-price');
-//     const productValue = productPrice.innerText;
-//     const productValueString = parseFloat(productValue);
-
-//     const totalPrice = document.getElementById('total-price');
-//     const totalPriceValue = totalPrice.innerText;
-//     const totalPriceValueString = parseFloat(totalPriceValue);
-
-//     const totalSum = totalPriceValueString + productValueString;
-//     totalPrice.innerText = totalSum;
-
-
-// }
-
 
 // main function
 
@@ -54,7 +31,7 @@ function firstValue(){
     const innerPriceValue = getInnerPriceValue('first-price');
     const totalPrice = getInnerPriceValue('total-price');
 
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
 }
 // second-card
@@ -69,7 +46,7 @@ function secondValue(){
     const innerPriceValue = getInnerPriceValue('second-price');
     const totalPrice = getInnerPriceValue('total-price');
     
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
 }
 // Third-card
@@ -84,7 +61,7 @@ function thirdValue(){
     const innerPriceValue = getInnerPriceValue('third-price');
     const totalPrice = getInnerPriceValue('total-price');
     
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
 }
 // Fourth-card
@@ -99,7 +76,7 @@ function fourthValue(){
     const innerPriceValue = getInnerPriceValue('fourth-price');
     const totalPrice = getInnerPriceValue('total-price');
     
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
 }
 // fifth-card
@@ -114,7 +91,7 @@ function fifthValue(){
     const innerPriceValue = getInnerPriceValue('fifth-price');
     const totalPrice = getInnerPriceValue('total-price');
     
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
 }
 // sixth-card
@@ -129,9 +106,8 @@ function sixthValue(){
     const innerPriceValue = getInnerPriceValue('sixth-price');
     const totalPrice = getInnerPriceValue('total-price');
     
-    const sum = innerPriceValue + totalPrice;
+    sum = innerPriceValue + totalPrice;
     setInnerText('total-price', sum);
-
 }
 function applyDiscount(){
     const totalSum = getInnerPriceValue('total-price');
@@ -141,4 +117,8 @@ function applyDiscount(){
     setInnerText('total-discount-price', discount);
 }
 
+if(sum > 0){
+    const purchase = document.getElementById('purchase-btn');
+    purchase.removeAttribute('disabled');
+}
 
