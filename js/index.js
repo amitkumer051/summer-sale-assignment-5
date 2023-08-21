@@ -1,22 +1,3 @@
-
-// main function
-function getInnerTextValue(innerName) {
-    const innerTextValue = document.getElementById(innerName);
-    const innerValue = innerTextValue.innerText;
-    return innerValue;
-}
-
-function getInnerPriceValue(innerPrice) {
-    const innerPriceValue = document.getElementById(innerPrice);
-    const innerPriceList = innerPriceValue.innerText;
-    const innerPriceString = parseFloat(innerPriceList);
-    return innerPriceString;
-}
-function setInnerText(elementId, value) {
-    const element = document.getElementById(elementId);
-    element.innerText = value;
-}
-
 let sum = 0;
 //first card
 function firstValue() {
@@ -138,23 +119,24 @@ function sixthValue() {
         purchase.removeAttribute('disabled');
     }
 }
+
+//discount / condition / discount total price
 function applyDiscount() {
     const totalSum = getInnerPriceValue('total-price');
     const cupon = document.getElementById('input-cupon');
     const validCupon = cupon.value;
     cupon.value = '';
     if (validCupon === 'SELL200' && totalSum >= 200) {
-        const discountPrice = totalSum * (20 / 100);
+        const discountPrice = totalSum.toFixed(2) * (20 / 100);
         const discount = totalSum - discountPrice;
         setInnerText('discount-price', discountPrice.toFixed(2));
-        setInnerText('total-discount-price', discount);
+        setInnerText('total-discount-price', discount.toFixed(2));
     } else {
-        alert('Not a valid cupon');
+        alert('Not Valid');
         return;
     }
 }
-
-document.getElementById('reset-page').addEventListener('click', function () {
+// page reset
+function reloadPage(){
     location.reload();
-})
-
+}

@@ -21,9 +21,9 @@
 </head>
 
 <body>
-    <header class="container mx-auto">
+    <header class="bg-[#F9F6E2]">
         <section
-            class=" p-2 md:px-3 lg:px-5 mx-auto justify-center flex flex-col lg:flex-row items-center gap-10 bg-[#F9F6E2]">
+            class="container mx-auto p-2 md:px-3 lg:px-5 justify-center flex flex-col lg:flex-row items-center gap-10 ">
             <div class="text-center space-y-8 mb-8 ">
                 <h4 class="text-2xl text-[#111] uppercase font-medium">---Sale Fever---</h4>
                 <h1 class="text-[44px] font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
@@ -36,14 +36,14 @@
             </div>
         </section>
     </header>
-
-    <main class="container mx-auto">
-        <section class="bg-[#F8F8F8] pt-16  container">
+<!-- card section -->
+    <main class="bg-[#F8F8F8]">
+        <section class="container mx-auto pt-16  container">
             <div class=" mx-auto justify-center flex flex-col lg:flex-row p-10 lg:p-5  lg:gap-8">
-                <div class="">
+                <div>
                     <p class="font-semibold text-4xl  mx-auto text-center lg:text-left lg:pb-4 pb-10 ">Kitchenware</p>
                     <div class="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-                        <!-- <div class="flex flex-col-1 md:flex-col-2 lg:flex-col-3 gap-6 "> -->
+                        <!-- First-card -->
                         <div>
                             <div onclick="firstValue()" class="card bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
@@ -64,7 +64,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="">
+                         <!-- Second-card -->
+                        <div>
                             <div onclick="secondValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod2.png" alt="prod2" />
@@ -84,7 +85,8 @@
                             </div>
 
                         </div>
-                        <div class="">
+                        <!-- third-card -->
+                        <div>
                             <div onclick="thirdValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-14 rounded-md " src="/images/prod3.png" alt="prod3" />
@@ -109,7 +111,8 @@
                         Sportswear
                     </h1>
                     <div class="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto mb-14 ">
-                        <div class="">
+                        <!-- Fourth-card -->
+                        <div>
                             <div onclick="fourthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-56  " src="/images/prod4.png"
@@ -129,7 +132,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="">
+                         <!-- Fifth-card -->
+                        <div>
                             <div onclick="fifthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-48 " src="/images/prod5.png"
@@ -150,7 +154,8 @@
                             </div>
 
                         </div>
-                        <div class="">
+                         <!-- Sixth-card -->
+                        <div>
                             <div onclick="sixthValue()" class="card  bg-base-100 ">
                                 <figure class=" p-3 w-56 mx-auto">
                                     <img class="bg-[#1111110D] p-10 rounded-md h-48 w-46" src="/images/prod6.png"
@@ -172,16 +177,18 @@
                         </div>
                     </div>
                 </div>
+                <!-- Cupon area -->
                 <div class="mx-auto lg:mx-0">
                     <div class="bg-white w-56 h-24 p-4 mb-10 lg:mt-14 rounded-md">
                         <h1 class="font-medium">Have coupon?</h1>
                         <span>
                             <input id="input-cupon"
-                                class="  border-r-0 w-28 py-0.5 px-1 border border-gray-400 rounded-tl-lg rounded-bl-lg"
+                                class="  border-r-0 w-28 py-0.5 px-1 border-2 border-gray-400 rounded-tl-lg rounded-bl-lg"
                                 type="text" placeholder="Coupon code"> <button onclick="applyDiscount()"
                                 class="text-white bg-[#E527B2] p-1 px-2 rounded-tr-lg rounded-br-lg -ml-1.5">Apply</button>
                         </span>
                     </div>
+                    <!-- Calculation area -->
                     <div class="bg-white w-56 h-auto p-4 lg:mt-14 rounded-md mb-20">
                         <div id="product-name-list" class="mb-2">
 
@@ -193,8 +200,7 @@
                             <p>Total: <span id="total-discount-price">00</span> TK</p>
                         </div>
                         <hr>
-                        <div class="mt-4 -mb-8">
-                            <!-- Open the modal using ID.showModal() method -->
+                        <div class="mt-4 -mb-8">               
                             <button id="purchase-btn" class="bg-[#E527B2] h-10 rounded-lg w-48 text-white"
                                 onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
                             <dialog id="my_modal_1" class="modal">
@@ -203,8 +209,7 @@
                                     <p class="py-4 text-5xl font-bold">Congratulations</p>
                                     <p class="font-normal ">Your Purchase the product</p>
                                     <div class="modal-action">
-                                        <!-- if there is a button in form, it will close the modal -->
-                                        <button id="reset-page"
+                                        <button onclick="reloadPage()"
                                             class="bg-[#E527B2] h-10 w-24 rounded-lg text-white mx-auto">Go
                                             Home</button>
                                     </div>
@@ -215,7 +220,8 @@
                 </div>
             </div>
         </section>
-
+        <!-- java script link  -->
+        <script src="js/utilities.js"></script>
         <script src="js/index.js"></script>
     </main>
     <footer>
