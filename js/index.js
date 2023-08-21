@@ -1,4 +1,3 @@
-let sum = 0;
 //first card
 function firstValue() {
     const textName = getInnerTextValue('first-name');
