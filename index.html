@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,7 +60,7 @@
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                     </div>
                                     <p id="first-name" class="font-semibold">K. Accessories</p>
-                                    <p id="first-price"  class="text-[#11111180]">39.00 TK</p>
+                                    <p id="first-price" class="text-[#11111180]">39.00 TK</p>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +176,7 @@
                     <div class="bg-white w-56 h-24 p-4 mb-10 lg:mt-14 rounded-md">
                         <h1 class="font-medium">Have coupon?</h1>
                         <span>
-                            <input
+                            <input id="input-cupon"
                                 class="  border-r-0 w-28 py-0.5 px-1 border border-gray-400 rounded-tl-lg rounded-bl-lg"
                                 type="text" placeholder="Coupon code"> <button onclick="applyDiscount()"
                                 class="text-white bg-[#E527B2] p-1 px-2 rounded-tr-lg rounded-br-lg -ml-1.5">Apply</button>
@@ -183,7 +184,7 @@
                     </div>
                     <div class="bg-white w-56 h-auto p-4 lg:mt-14 rounded-md mb-20">
                         <div id="product-name-list" class="mb-2">
-                            
+
                         </div>
                         <hr>
                         <div class="mt-2 mb-2 font-medium">
@@ -203,7 +204,8 @@
                                     <p class="font-normal ">Your Purchase the product</p>
                                     <div class="modal-action">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="bg-[#E527B2] h-10 w-24 rounded-lg text-white mx-auto">Go
+                                        <button id="reset-page"
+                                            class="bg-[#E527B2] h-10 w-24 rounded-lg text-white mx-auto">Go
                                             Home</button>
                                     </div>
                                 </form>
