@@ -23,7 +23,7 @@
 <body>
     <header class="bg-[#F9F6E2]">
         <section
-            class="container mx-auto p-2 md:px-3 lg:px-5 justify-center flex flex-col lg:flex-row items-center gap-10 ">
+            class="container mx-auto p-5 md:px-3 lg:px-5 justify-center flex flex-col lg:flex-row items-center gap-10 ">
             <div class="text-center space-y-8 mb-8 ">
                 <h4 class="text-2xl text-[#111] uppercase font-medium">---Sale Fever---</h4>
                 <h1 class="text-[44px] font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
@@ -183,21 +183,21 @@
                         <h1 class="font-medium">Have coupon?</h1>
                         <span>
                             <input id="input-cupon"
-                                class="  border-r-0 w-28 py-0.5 px-1 border-2 border-gray-400 rounded-tl-lg rounded-bl-lg"
-                                type="text" placeholder="Coupon code"> <button onclick="applyDiscount()"
-                                class="text-white bg-[#E527B2] p-1 px-2 rounded-tr-lg rounded-br-lg -ml-1.5">Apply</button>
+                                class=" border-r-0 w-28 py-0.5 px-1 border-2 border-gray-400 rounded-tl-lg rounded-bl-lg"
+                                type="text" placeholder="Coupon code"> <button id="apply-btn" onclick="applyDiscount()"
+                                class="text-white bg-[#E527B2] p-1 px-2 rounded-tr-lg rounded-br-lg -ml-1.5"disabled>Apply</button>
                         </span>
                     </div>
-                    <!-- Calculation area -->
+                    <!-- cart area -->
                     <div class="bg-white w-56 h-auto p-4 lg:mt-14 rounded-md mb-20">
                         <div id="product-name-list" class="mb-2">
 
                         </div>
                         <hr>
                         <div class="mt-2 mb-2 font-medium">
-                            <p>Total Price: <span id="total-price">00</span> TK</p>
-                            <p>Discount: <span id="discount-price">00</span> TK</p>
-                            <p>Total: <span id="total-discount-price">00</span> TK</p>
+                            <p>Total Price: <span id="total-price" class="text-gray-500">00</span> <span class="text-gray-500">TK</span></p>
+                            <p>Discount: <span id="discount-price" class="text-gray-500">00</span> <span class="text-gray-500">TK</span></p>
+                            <p>Total: <span id="total-discount-price" class="text-gray-500">00</span> <span class="text-gray-500">TK</span></p>
                         </div>
                         <hr>
                         <div class="mt-4 -mb-8">               
@@ -206,11 +206,11 @@
                             <dialog id="my_modal_1" class="modal">
                                 <form method="dialog" class="modal-box text-center">
                                     <img class="mx-auto w-32 h-32" src="images/congo.png" alt="">
-                                    <p class="py-4 text-5xl font-bold">Congratulations</p>
+                                    <p class="py-4 text-4xl font-bold">Congratulations</p>
                                     <p class="font-normal ">Your Purchase the product</p>
                                     <div class="modal-action">
                                         <button onclick="reloadPage()"
-                                            class="bg-[#E527B2] h-10 w-24 rounded-lg text-white mx-auto">Go
+                                            class="bg-[#E527B2] h-10 w-28 rounded-lg text-white mx-auto">Go
                                             Home</button>
                                     </div>
                                 </form>

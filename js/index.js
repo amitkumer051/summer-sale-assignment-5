@@ -119,23 +119,29 @@ function sixthValue() {
     }
 }
 
-//discount / condition / discount total price
 function applyDiscount() {
     const totalSum = getInnerPriceValue('total-price');
     const cupon = document.getElementById('input-cupon');
     const validCupon = cupon.value;
     cupon.value = '';
-    if (validCupon === 'SELL200' && totalSum >= 200) {
-        const discountPrice = totalSum.toFixed(2) * (20 / 100);
-        const discount = totalSum - discountPrice;
-        setInnerText('discount-price', discountPrice.toFixed(2));
-        setInnerText('total-discount-price', discount.toFixed(2));
-    } else {
-        alert('Not Valid');
-        return;
-    }
+    const discountPrice = totalSum.toFixed(2) * (20 / 100);
+    const discount = totalSum - discountPrice;
+    setInnerText('discount-price', discountPrice.toFixed(2));
+    setInnerText('total-discount-price', discount.toFixed(2));
+
 }
-// page reset
+document.getElementById('input-cupon').addEventListener('keyup',function(event){
+    const code = event.target.value;
+    const totalSum = getInnerPriceValue('total-price');
+    const apply = document.getElementById('apply-btn');
+    if(totalSum >= 200 && code=== 'SELL200'){
+        apply.removeAttribute('disabled');
+    }else{
+        apply.setAttribute('disabled', true);
+        
+    }
+})
+
 function reloadPage(){
     location.reload();
 }
